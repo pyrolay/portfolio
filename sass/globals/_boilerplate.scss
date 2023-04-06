@@ -1,0 +1,13 @@
+@use '../utils' as u;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: u.$primary-font;
+}
+
+ul {
+    list-style: none;
+}

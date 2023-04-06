@@ -1,0 +1,23 @@
+@use '../utils' as u;
+
+.nav {
+    height: 60px;
+    
+    @include u.flexbox(center);
+
+    &__mobile {
+        max-width: 100%;
+        padding: 0 20px;
+        @include u.breakpoint(small) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+
+        @include u.breakpoint(small) {
+            display: block;
+        }
+    }
+}
