@@ -1,0 +1,89 @@
+@use '../utils' as u;
+@use '../globals/'as g;
+
+.hero {
+    height: 100vh;
+    &__image {
+        width: 100%;
+        div {
+            position: relative;
+
+            @include u.flexbox(center);
+
+            .image-container {
+                width: 80%;
+                height: 200px;
+
+                .main-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border: 2px solid g.$primary-color;
+                    border-radius: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+                }
+            }
+
+            .cat__button {
+                width: 20%;
+                position: absolute;
+                left: 25px;
+                bottom: 0;
+                background-color: #D9D9D9;
+                border: 2px solid g.$primary-color;
+                border-radius: 100%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+                cursor: pointer;
+
+                @include u.flexbox(center);
+
+                img {
+                    width: 100%;
+                    padding: 8px;
+                }
+            }
+        }
+
+        p {
+            margin: 12px 0 9px;
+            text-align: center;
+            font-family: 'VT323', monospace;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            color: g.$secondary-color;
+            font-family: u.$secondary-font;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            font-family: u.$secondary-font;
+        }
+
+        p {
+            font-family: u.$secondary-font;
+        }
+
+        .social-icon {
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 3px solid g.$secondary-color;
+
+            @include u.flexbox(center);
+
+            a {
+                font-size: 2rem;
+                margin: 0 12px;
+
+                @include u.flexbox(center)
+            }
+        }
+    }
+}
