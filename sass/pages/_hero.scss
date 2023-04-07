@@ -2,7 +2,6 @@
 @use '../globals/'as g;
 
 .hero {
-    height: 100vh;
     &__image {
         width: 100%;
         div {
@@ -11,8 +10,8 @@
             @include u.flexbox(center);
 
             .image-container {
-                width: 80%;
-                height: 200px;
+                width: 15em;
+                height: 15em;
 
                 .main-image {
                     width: 100%;

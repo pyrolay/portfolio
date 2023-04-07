@@ -1,5 +1,9 @@
 @use '../utils' as u;
 
+html {
+ scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +15,13 @@
 
 ul {
     list-style: none;
+}
+
+section {
+    padding: 0 20px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    padding-top: 100px;
 }
