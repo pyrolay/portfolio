@@ -1,4 +1,5 @@
-@use '../utils' as u;
+@use './colors';
+@use '../utils';
 
 html {
  scroll-behavior: smooth;
@@ -9,8 +10,12 @@ html {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.5;
-    font-family: u.$primary-font;
+    font-family: utils.$primary-font;
     -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: colors.$background;
 }
 
 ul {
@@ -24,4 +29,10 @@ section {
     align-content: center;
     min-height: 100vh;
     padding-top: 100px;
+}
+
+.container__info {
+    border: 3px solid colors.$primary-color;
+    border-radius: 16px;
+    padding: 16px;
 }

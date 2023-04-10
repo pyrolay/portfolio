@@ -11,6 +11,10 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 ul {
   list-style: none;
 }
@@ -24,22 +28,30 @@ section {
   padding-top: 100px;
 }
 
+.container__info {
+  border: 3px solid #54633C;
+  border-radius: 16px;
+  padding: 16px;
+}
+
 h1,
 h2,
 h3 {
   font-weight: 600;
   margin-top: 0;
+  color: #303030;
 }
 
 p {
   margin-top: 0;
+  color: #303030;
 }
 
 a,
 a:visited,
 a:active {
   text-decoration: none;
-  color: black;
+  color: #303030;
 }
 
 .nav__mobile {
@@ -161,7 +173,6 @@ a:active {
 .about .container h2 {
   width: 150px;
   margin-left: 16px;
-  text-align: center;
   font-weight: bold;
   font-family: "Lexend", sans-serif;
 }
@@ -172,11 +183,6 @@ a:active {
   border-top: 3px solid #54633C;
   border-right: 3px solid #54633C;
   border-top-right-radius: 16px;
-}
-.about .container__info {
-  border: 3px solid #54633C;
-  border-radius: 16px;
-  padding: 16px;
 }
 .about .skills {
   margin-top: 3rem;
@@ -191,15 +197,14 @@ a:active {
 }
 .about .skills ul span {
   color: black;
-  text-align: center;
 }
 
 .nav {
   height: 60px;
   width: 100%;
   position: fixed;
-  border-bottom: 1px solid black;
-  background-color: white;
+  border-bottom: 1px solid #303030;
+  background-color: #f7f7f7;
   z-index: 1;
   display: flex;
   align-items: center;

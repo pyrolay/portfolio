@@ -1,17 +1,21 @@
+@use './colors';
+
 h1,
 h2,
 h3 {
     font-weight: 600;
     margin-top: 0;
+    color: colors.$text;
 }
 
 p {
     margin-top: 0;
+    color: colors.$text;
 }
 
 a, 
 a:visited, 
 a:active {
     text-decoration: none;
-    color: black;
+    color: colors.$text;
 }

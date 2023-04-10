@@ -1,7 +1,7 @@
-@use '../utils' as u;
+@use '../utils';
 
 .hero {
     padding-top: 50px;
     flex-direction: column;
-    @include u.flexbox(center)
+    @include utils.flexbox(center)
 }

@@ -1,5 +1,5 @@
-@use '../globals' as g;
-@use '../utils' as u;
+@use '../globals';
+@use '../utils';
 
 .about {
     .container {
@@ -8,40 +8,33 @@
         h2 {
             width: 150px;
             margin-left: 16px;
-            text-align: center;
             font-weight: bold;
-            font-family: u.$secondary-font;
+            font-family: utils.$secondary-font;
         }
 
         .border {
             width: 150px;
             height: 1.5em;
             margin-left: 16px;
-            border-top: 3px solid g.$primary-color;
-            border-right: 3px solid g.$primary-color;
+            border-top: 3px solid globals.$primary-color;
+            border-right: 3px solid globals.$primary-color;
             border-top-right-radius: 16px;
-        }
-
-        &__info {
-            border: 3px solid g.$primary-color;
-            border-radius: 16px;
-            padding: 16px;
         }
     }
 
     .skills {
         margin-top: 3rem;
+        
         ul {
             list-style: disc;
             list-style-position: inside;
-            color: g.$secondary-color;
+            color: globals.$secondary-color;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
 
             span {
                 color: black;
-                text-align: center;
             }
 
         }
