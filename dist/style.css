@@ -28,7 +28,24 @@ section {
   padding-top: 100px;
 }
 
-.container__info {
+.container {
+  width: 100%;
+}
+.container h2 {
+  width: 150px;
+  margin-left: 16px;
+  font-weight: bold;
+  font-family: "Lexend", sans-serif;
+}
+.container .border {
+  width: 150px;
+  height: 1.5em;
+  margin-left: 16px;
+  border-top: 3px solid #54633C;
+  border-right: 3px solid #54633C;
+  border-top-right-radius: 16px;
+}
+.container .container__info {
   border: 3px solid #54633C;
   border-radius: 16px;
   padding: 16px;
@@ -167,36 +184,66 @@ a:active {
   justify-content: center;
 }
 
-.about .container {
-  width: 100%;
-}
-.about .container h2 {
-  width: 150px;
-  margin-left: 16px;
-  font-weight: bold;
-  font-family: "Lexend", sans-serif;
-}
-.about .container .border {
-  width: 150px;
-  height: 1.5em;
-  margin-left: 16px;
-  border-top: 3px solid #54633C;
-  border-right: 3px solid #54633C;
-  border-top-right-radius: 16px;
-}
 .about .skills {
   margin-top: 3rem;
 }
 .about .skills ul {
-  list-style: disc;
-  list-style-position: inside;
-  color: #903F45;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
+@media (min-width: 23.43em) {
+  .about .skills ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .about .skills ul span {
-  color: black;
+  color: #903F45;
+  margin-right: 8px;
+}
+
+.projects .container__info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+}
+.projects .container__info .card img {
+  width: 100%;
+}
+.projects .container__info .card__info {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  gap: 8px;
+}
+.projects .container__info .card__info h3 {
+  color: #903F45;
+}
+.projects .container__info .card__info .description {
+  font-size: 14px;
+}
+.projects .container__info .card__info .tags {
+  color: #54633C;
+}
+.projects .container__info .card__info .links {
+  margin-top: 8px;
+  display: grid;
+  flex-direction: column;
+  gap: 6px;
+}
+.projects .container__info .card__info .links a {
+  font-weight: bold;
+  color: #903F45;
+  cursor: pointer;
+}
+.projects .container__info .card__info .links a i {
+  transition: 0.4s;
+  font-size: 12px;
+  margin-left: 4px;
+}
+.projects .container__info .card__info .links a:hover i {
+  margin-left: 8px;
 }
 
 .nav {

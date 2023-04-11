@@ -2,39 +2,21 @@
 @use '../utils';
 
 .about {
-    .container {
-        width: 100%;
-
-        h2 {
-            width: 150px;
-            margin-left: 16px;
-            font-weight: bold;
-            font-family: utils.$secondary-font;
-        }
-
-        .border {
-            width: 150px;
-            height: 1.5em;
-            margin-left: 16px;
-            border-top: 3px solid globals.$primary-color;
-            border-right: 3px solid globals.$primary-color;
-            border-top-right-radius: 16px;
-        }
-    }
-
     .skills {
         margin-top: 3rem;
         
         ul {
-            list-style: disc;
-            list-style-position: inside;
-            color: globals.$secondary-color;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 10px;
 
+            @include utils.breakpoint(xsmall) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
             span {
-                color: black;
+                color: globals.$secondary-color;
+                margin-right: 8px;
             }
 
         }
