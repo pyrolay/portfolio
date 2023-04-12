@@ -191,6 +191,7 @@ a:active {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
+  margin-top: 16px;
 }
 @media (min-width: 23.43em) {
   .about .skills ul {
@@ -244,6 +245,27 @@ a:active {
 }
 .projects .container__info .card__info .links a:hover i {
   margin-left: 8px;
+}
+
+.contact {
+  padding-top: 0;
+}
+.contact .social-links {
+  margin-top: 16px;
+}
+.contact .social-links div {
+  margin-bottom: 16px;
+}
+.contact .social-links div p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.contact .social-links div a {
+  text-decoration: underline;
+  color: #903F45;
+}
+.contact .social-links div a i {
+  font-size: 10px;
 }
 
 .nav {
