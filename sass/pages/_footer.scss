@@ -1,0 +1,13 @@
+@use '../globals';
+
+footer {
+    font-weight: bold;
+    border-top: 1px solid black;
+
+    h2 {
+        width: 200px;
+        margin-bottom: 16px;
+        color: globals.$secondary-color;
+        border-bottom: 3px solid globals.$secondary-color;
+    }
+} 

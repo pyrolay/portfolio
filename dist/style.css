@@ -136,7 +136,6 @@ a:active {
   background-color: #D9D9D9;
   border: 2px solid #54633C;
   border-radius: 100%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -268,6 +267,48 @@ a:active {
   font-size: 10px;
 }
 
+footer {
+  font-weight: bold;
+  border-top: 1px solid black;
+}
+footer h2 {
+  width: 200px;
+  margin-bottom: 16px;
+  color: #903F45;
+  border-bottom: 3px solid #903F45;
+}
+
+.theme {
+  width: 80%;
+}
+.theme__colors {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.theme__colors button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+  opacity: 0.5;
+}
+.theme__colors button.active {
+  opacity: 1;
+}
+.theme__light {
+  background-color: white;
+}
+.theme__dark {
+  background-color: black;
+}
+.theme__pride {
+  background-image: linear-gradient(to bottom, #d82c01, #f1752c, #ff985b, #ffffff, #d162a3, #b75591, #a60260);
+}
+
 .nav {
   height: 60px;
   width: 100%;
@@ -299,6 +340,16 @@ a:active {
 
 .hero {
   padding-top: 50px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: 200px;
+  padding: 0 20px;
+  text-align: center;
   flex-direction: column;
   display: flex;
   align-items: center;
