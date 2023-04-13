@@ -40,3 +40,39 @@
         }
     }
 }
+
+.nav__desktop {
+    width: 100%;
+
+    .nav-link {
+        @include utils.flexbox(center);
+
+        a {
+            position: relative;
+            padding: 0 10px;
+            transition: 0.3s;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            background-color: globals.$secondary-color;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: globals.$secondary-color;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    }
+
+}

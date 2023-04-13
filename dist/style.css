@@ -106,16 +106,48 @@ a:active {
   width: 100%;
 }
 
+.nav__desktop {
+  width: 100%;
+}
+.nav__desktop .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__desktop .nav-link a {
+  position: relative;
+  padding: 0 10px;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.nav__desktop .nav-link a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: #903F45;
+  transition: 0.3s;
+}
+.nav__desktop .nav-link a:hover {
+  color: #903F45;
+}
+.nav__desktop .nav-link a:hover::after {
+  width: 100%;
+}
+
 .hero__image {
   width: 100%;
 }
 .hero__image div {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero__image div .image-container {
+  position: relative;
   width: 15em;
   height: 15em;
 }
@@ -128,10 +160,10 @@ a:active {
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
 }
-.hero__image div .cat__button {
-  width: 20%;
+.hero__image div .image-container .cat__button {
+  width: 4em;
   position: absolute;
-  left: 25px;
+  left: 1em;
   bottom: 0;
   background-color: #D9D9D9;
   border: 2px solid #54633C;
@@ -141,7 +173,7 @@ a:active {
   align-items: center;
   justify-content: center;
 }
-.hero__image div .cat__button img {
+.hero__image div .image-container .cat__button img {
   width: 100%;
   padding: 8px;
 }
@@ -334,12 +366,25 @@ footer h2 {
 }
 @media (min-width: 30em) {
   .nav__desktop {
-    display: block;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 47.94em) {
+  .nav__desktop {
+    width: 60%;
+    padding: 0 50px;
+  }
+}
+@media (min-width: 80em) {
+  .nav__desktop {
+    width: 40%;
   }
 }
 
 .hero {
-  padding-top: 50px;
   flex-direction: column;
   display: flex;
   align-items: center;

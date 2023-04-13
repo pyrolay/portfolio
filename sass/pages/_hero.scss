@@ -5,11 +5,11 @@
     &__image {
         width: 100%;
         div {
-            position: relative;
 
             @include utils.flexbox(center);
 
             .image-container {
+                position: relative;
                 width: 15em;
                 height: 15em;
 
@@ -21,23 +21,23 @@
                     border-radius: 100%;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
                 }
-            }
 
-            .cat__button {
-                width: 20%;
-                position: absolute;
-                left: 25px;
-                bottom: 0;
-                background-color: #D9D9D9;
-                border: 2px solid globals.$primary-color;
-                border-radius: 100%;
-                cursor: pointer;
-
-                @include utils.flexbox(center);
-
-                img {
-                    width: 100%;
-                    padding: 8px;
+                .cat__button {
+                    width: 4em;
+                    position: absolute;
+                    left: 1em;
+                    bottom: 0;
+                    background-color: #D9D9D9;
+                    border: 2px solid globals.$primary-color;
+                    border-radius: 100%;
+                    cursor: pointer;
+    
+                    @include utils.flexbox(center);
+    
+                    img {
+                        width: 100%;
+                        padding: 8px;
+                    }
                 }
             }
         }

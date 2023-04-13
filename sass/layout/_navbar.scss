@@ -23,7 +23,18 @@
         display: none;
 
         @include utils.breakpoint(small) {
-            display: block;
+            width: 70%;
+
+            @include utils.flexbox(space-evenly);
+        }
+
+        @include utils.breakpoint(medium) {
+            width: 60%;
+            padding: 0 50px;
+        }
+
+        @include utils.breakpoint(xlarge) {
+            width: 40%;
         }
     }
 }
