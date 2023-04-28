@@ -81,7 +81,7 @@ a:active {
   flex-direction: column;
   position: relative;
   padding: 0 10px;
-  transition: 0.3s;
+  transition: 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,12 +97,12 @@ a:active {
   left: 0;
   bottom: -3px;
   background-color: #903F45;
-  transition: 0.3s;
+  transition: 0.2s;
 }
-.nav__mobile .nav-link a:hover {
+.nav__mobile .nav-link.active a {
   color: #903F45;
 }
-.nav__mobile .nav-link a:hover .link-icon::after {
+.nav__mobile .nav-link.active a .link-icon::after {
   width: 100%;
 }
 
@@ -117,7 +117,7 @@ a:active {
 .nav__desktop .nav-link a {
   position: relative;
   padding: 0 10px;
-  transition: 0.3s;
+  transition: 0.2s;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -129,7 +129,7 @@ a:active {
   left: 0;
   bottom: -3px;
   background-color: #903F45;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .nav__desktop .nav-link a:hover {
   color: #903F45;
@@ -137,9 +137,18 @@ a:active {
 .nav__desktop .nav-link a:hover::after {
   width: 100%;
 }
+.nav__desktop .nav-link.active a, .nav__desktop .nav-link.active a::after {
+  color: #903F45;
+  width: 100%;
+}
 
 .hero__image {
   width: 100%;
+}
+@media (min-width: 47.94em) {
+  .hero__image {
+    width: unset;
+  }
 }
 .hero__image div {
   display: flex;
@@ -150,6 +159,12 @@ a:active {
   position: relative;
   width: 15em;
   height: 15em;
+}
+@media (min-width: 47.94em) {
+  .hero__image div .image-container {
+    width: 16em;
+    height: 16em;
+  }
 }
 .hero__image div .image-container .main-image {
   width: 100%;
@@ -173,6 +188,11 @@ a:active {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 47.94em) {
+  .hero__image div .image-container .cat__button {
+    width: 6em;
+  }
+}
 .hero__image div .image-container .cat__button img {
   width: 100%;
   padding: 8px;
@@ -184,6 +204,11 @@ a:active {
 }
 .hero__title {
   text-align: center;
+}
+@media (min-width: 47.94em) {
+  .hero__title {
+    margin-left: 16px;
+  }
 }
 .hero__title h1 {
   font-size: 30px;
@@ -389,6 +414,18 @@ footer h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 47.94em) {
+  .hero {
+    width: 70%;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
+@media (min-width: 767px) and (min-height: 500px) {
+  .hero {
+    padding-top: 0px;
+  }
 }
 
 footer {

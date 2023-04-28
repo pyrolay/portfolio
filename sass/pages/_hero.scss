@@ -4,6 +4,11 @@
 .hero {
     &__image {
         width: 100%;
+
+        @include utils.breakpoint(medium) {
+            width: unset;
+        }
+
         div {
 
             @include utils.flexbox(center);
@@ -12,6 +17,11 @@
                 position: relative;
                 width: 15em;
                 height: 15em;
+
+                @include utils.breakpoint(medium) {
+                    width: 16em;
+                    height: 16em;
+                }
 
                 .main-image {
                     width: 100%;
@@ -33,6 +43,10 @@
                     cursor: pointer;
     
                     @include utils.flexbox(center);
+
+                    @include utils.breakpoint(medium) {
+                        width: 6em;
+                    }
     
                     img {
                         width: 100%;
@@ -52,11 +66,19 @@
     &__title {
         text-align: center;
 
+        @include utils.breakpoint(medium) {
+            margin-left: 16px;
+        }
+
         h1 {
             font-size: 30px;
             font-weight: 700;
             color: globals.$secondary-color;
             font-family: utils.$secondary-font;
+
+            // @include utils.breakpoint(medium) {
+            //     margin-left: 32px;
+            // }
         }
 
         h2 {

@@ -11,7 +11,7 @@
             flex-direction: column;
             position: relative;
             padding: 0 10px;
-            transition: 0.3s;
+            transition: 0.2s;
 
             @include utils.flexbox(center);
     
@@ -27,16 +27,16 @@
                 left: 0;
                 bottom: -3px;
                 background-color: globals.$secondary-color;
-                transition: 0.3s;
+                transition: 0.2s;
             }
         }
+    }
 
-        a:hover {
-            color: globals.$secondary-color;
+    .nav-link.active a {
+        color: globals.$secondary-color;
 
-            .link-icon::after {
-                width: 100%;
-            }
+        .link-icon::after {
+            width: 100%;
         }
     }
 }
@@ -50,7 +50,7 @@
         a {
             position: relative;
             padding: 0 10px;
-            transition: 0.3s;
+            transition: 0.2s;
             font-size: 1.1rem;
             font-weight: bold;
         }
@@ -63,7 +63,7 @@
             left: 0;
             bottom: -3px;
             background-color: globals.$secondary-color;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         a:hover {
@@ -75,4 +75,8 @@
         }
     }
 
+    .nav-link.active a, .nav-link.active a::after {
+        color: globals.$secondary-color;
+        width: 100%;
+    }
 }

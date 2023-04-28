@@ -2,5 +2,16 @@
 
 .hero {
     flex-direction: column;
-    @include utils.flexbox(center)
+
+    @include utils.flexbox(center);
+
+    @include utils.breakpoint(medium) {
+        width: 70%;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    @media (min-width: 767px) and (min-height: 500px) {
+        padding-top: 0px;
+    }
 }
