@@ -59,9 +59,18 @@ h3 {
   color: #303030;
 }
 
+h1 {
+  font-size: clamp(1.75rem, 1rem + 2vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 1.875rem);
+}
+
 p {
   margin-top: 0;
   color: #303030;
+  font-size: 1rem;
 }
 
 a,
@@ -162,8 +171,8 @@ a:active {
 }
 @media (min-width: 47.94em) {
   .hero__image div .image-container {
-    width: 16em;
-    height: 16em;
+    width: 18em;
+    height: 18em;
   }
 }
 .hero__image div .image-container .main-image {
@@ -190,7 +199,7 @@ a:active {
 }
 @media (min-width: 47.94em) {
   .hero__image div .image-container .cat__button {
-    width: 6em;
+    width: 5em;
   }
 }
 .hero__image div .image-container .cat__button img {
@@ -198,6 +207,7 @@ a:active {
   padding: 8px;
 }
 .hero__image p {
+  font-size: 1.2rem;
   margin: 12px 0 9px;
   text-align: center;
   font-family: "VT323", monospace;
@@ -211,13 +221,11 @@ a:active {
   }
 }
 .hero__title h1 {
-  font-size: 30px;
   font-weight: 700;
   color: #903F45;
   font-family: "Lexend", sans-serif;
 }
 .hero__title h2 {
-  font-size: 20px;
   font-weight: normal;
   font-family: "Lexend", sans-serif;
 }
@@ -313,7 +321,6 @@ a:active {
   margin-bottom: 16px;
 }
 .contact .social-links div p {
-  font-size: 14px;
   margin-bottom: 6px;
 }
 .contact .social-links div a {

@@ -28,15 +28,10 @@ const setActiveToNavBarLinks = () => {
     }
 }
 
-window.addEventListener("scroll", () => {
+window.addEventListener("load", () => {
     setActiveToNavBarLinks()
 })
 
-for (const navLink of $$navLinks) {
-    navLink.addEventListener("click", () => {
-        navLink.classList.add("active")
-    })
-}
-
-
-
+window.addEventListener("scroll", () => {
+    setActiveToNavBarLinks()
+})
