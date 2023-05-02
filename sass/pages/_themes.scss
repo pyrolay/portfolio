@@ -1,13 +1,12 @@
 @use '../utils';
 
 .theme {
-    width: 80%;
 
     &__colors {
-        width: 100%;
-        margin-top: 16px;
-
-        @include utils.flexbox(space-evenly);
+        margin: 24px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
 
         button {
             width: 40px;

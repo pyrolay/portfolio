@@ -6,12 +6,21 @@
         margin-top: 3rem;
         
         ul {
+            font-size: 1.2rem;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 10px;
             margin-top: 16px;
 
             @include utils.breakpoint(xsmall) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include utils.breakpoint(medium) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include utils.breakpoint(large) {
                 grid-template-columns: repeat(4, 1fr);
             }
 
@@ -19,7 +28,6 @@
                 color: globals.$secondary-color;
                 margin-right: 8px;
             }
-
         }
     }
 }

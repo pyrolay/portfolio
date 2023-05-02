@@ -5,11 +5,21 @@
 
     @include utils.flexbox(center);
 
-    @include utils.breakpoint(medium) {
-        width: 70%;
+    @include utils.breakpoint(small) {
+        max-width: 400px;
         margin: 0 auto;
+    }
+
+    @include utils.breakpoint(medium) {
+        max-width: 70%;
         flex-direction: row;
     }
+
+    @include utils.breakpoint(xlarge) {
+        max-width: 100%;
+        flex-direction: row;
+    }
+
 
     @media (min-width: 767px) and (min-height: 500px) {
         padding-top: 0px;

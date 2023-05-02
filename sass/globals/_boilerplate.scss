@@ -29,20 +29,25 @@ section {
     align-content: center;
     min-height: 100vh;
     padding-top: 100px;
+
+    @include utils.breakpoint(small) {
+        max-width: 70%;
+        margin: 0 auto;
+    }
 }
 
 .container {
         width: 100%;
 
         h2 {
-            width: 150px;
+            max-width: 50%;
             margin-left: 16px;
             font-weight: bold;
             font-family: utils.$secondary-font;
         }
 
         .border {
-            width: 150px;
+            max-width: 200px;
             height: 1.5em;
             margin-left: 16px;
             border-top: 3px solid colors.$primary-color;

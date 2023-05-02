@@ -27,18 +27,24 @@ section {
   min-height: 100vh;
   padding-top: 100px;
 }
+@media (min-width: 30em) {
+  section {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
 
 .container {
   width: 100%;
 }
 .container h2 {
-  width: 150px;
+  max-width: 50%;
   margin-left: 16px;
   font-weight: bold;
   font-family: "Lexend", sans-serif;
 }
 .container .border {
-  width: 150px;
+  max-width: 200px;
   height: 1.5em;
   margin-left: 16px;
   border-top: 3px solid #54633C;
@@ -70,7 +76,7 @@ h2 {
 p {
   margin-top: 0;
   color: #303030;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 a,
@@ -151,14 +157,6 @@ a:active {
   width: 100%;
 }
 
-.hero__image {
-  width: 100%;
-}
-@media (min-width: 47.94em) {
-  .hero__image {
-    width: unset;
-  }
-}
 .hero__image div {
   display: flex;
   align-items: center;
@@ -171,8 +169,20 @@ a:active {
 }
 @media (min-width: 47.94em) {
   .hero__image div .image-container {
+    width: 17em;
+    height: 17em;
+  }
+}
+@media (min-width: 64em) {
+  .hero__image div .image-container {
     width: 18em;
     height: 18em;
+  }
+}
+@media (min-width: 80em) {
+  .hero__image div .image-container {
+    width: 20em;
+    height: 20em;
   }
 }
 .hero__image div .image-container .main-image {
@@ -200,6 +210,12 @@ a:active {
 @media (min-width: 47.94em) {
   .hero__image div .image-container .cat__button {
     width: 5em;
+  }
+}
+@media (min-width: 80em) {
+  .hero__image div .image-container .cat__button {
+    width: 6em;
+    height: 6em;
   }
 }
 .hero__image div .image-container .cat__button img {
@@ -252,12 +268,23 @@ a:active {
   margin-top: 3rem;
 }
 .about .skills ul {
+  font-size: 1.2rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   margin-top: 16px;
 }
 @media (min-width: 23.43em) {
+  .about .skills ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 47.94em) {
+  .about .skills ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64em) {
   .about .skills ul {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -267,47 +294,50 @@ a:active {
   margin-right: 8px;
 }
 
-.projects .container__info {
+.projects .container__info .card__container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 30px;
+  margin: 16px 0;
+  margin-top: 24px;
 }
-.projects .container__info .card img {
+.projects .container__info .card__container .card img {
   width: 100%;
 }
-.projects .container__info .card__info {
+.projects .container__info .card__container .card__info {
   display: flex;
   flex-direction: column;
   display: grid;
   gap: 8px;
 }
-.projects .container__info .card__info h3 {
+.projects .container__info .card__container .card__info h3 {
   color: #903F45;
 }
-.projects .container__info .card__info .description {
-  font-size: 14px;
+.projects .container__info .card__container .card__info .description {
+  font-size: 1rem;
 }
-.projects .container__info .card__info .tags {
+.projects .container__info .card__container .card__info .tags {
   color: #54633C;
+  font-size: 1.1rem;
 }
-.projects .container__info .card__info .links {
+.projects .container__info .card__container .card__info .links {
   margin-top: 8px;
   display: grid;
   flex-direction: column;
   gap: 6px;
 }
-.projects .container__info .card__info .links a {
+.projects .container__info .card__container .card__info .links a {
   font-weight: bold;
   color: #903F45;
   cursor: pointer;
 }
-.projects .container__info .card__info .links a i {
+.projects .container__info .card__container .card__info .links a i {
   transition: 0.4s;
-  font-size: 12px;
+  font-size: 0.9rem;
   margin-left: 4px;
 }
-.projects .container__info .card__info .links a:hover i {
+.projects .container__info .card__container .card__info .links a:hover i {
   margin-left: 8px;
 }
 
@@ -342,15 +372,11 @@ footer h2 {
   border-bottom: 3px solid #903F45;
 }
 
-.theme {
-  width: 80%;
-}
 .theme__colors {
-  width: 100%;
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 .theme__colors button {
   width: 40px;
@@ -422,10 +448,21 @@ footer h2 {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 30em) {
+  .hero {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 47.94em) {
   .hero {
-    width: 70%;
-    margin: 0 auto;
+    max-width: 70%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 80em) {
+  .hero {
+    max-width: 100%;
     flex-direction: row;
   }
 }

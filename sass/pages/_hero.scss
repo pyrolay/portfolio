@@ -3,14 +3,8 @@
 
 .hero {
     &__image {
-        width: 100%;
-
-        @include utils.breakpoint(medium) {
-            width: unset;
-        }
 
         div {
-
             @include utils.flexbox(center);
 
             .image-container {
@@ -19,8 +13,18 @@
                 height: 15em;
 
                 @include utils.breakpoint(medium) {
+                    width: 17em;
+                    height: 17em;
+                }
+
+                @include utils.breakpoint(large) {
                     width: 18em;
                     height: 18em;
+                }
+
+                @include utils.breakpoint(xlarge) {
+                    width: 20em;
+                    height: 20em;
                 }
 
                 .main-image {
@@ -46,6 +50,11 @@
 
                     @include utils.breakpoint(medium) {
                         width: 5em;
+                    }
+
+                    @include utils.breakpoint(xlarge) {
+                        width: 6em;
+                        height: 6em;
                     }
     
                     img {
