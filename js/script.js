@@ -3,6 +3,8 @@ const $$ = (selector) => document.querySelectorAll(selector)
 
 // Variables
 
+const $mainContainer = $(".main-container")
+
 const $hero = $(".hero")
 const $about = $(".about")
 const $projects = $(".projects")
@@ -22,8 +24,8 @@ let currentTheme = localStorage.getItem("theme")
 // Functions
 
 const addActiveClass = (element) => element.classList.add("active")
-
 const removeActiveClass = (element) => element.classList.remove("active")
+
 
 const setActiveToNavBarLinks = () => {
     for (const section of sections) {
@@ -42,30 +44,45 @@ const setActiveToNavBarLinks = () => {
     }
 }
 
+
+
 const setCurrentTheme = (theme) => localStorage.setItem("theme", theme)
+
+const setThemeClass = (theme) => {
+    $mainContainer.className = "main-container"
+    $mainContainer.classList.add(theme)
+}
+
+const setClassOnloadTheme = (currentTheme) => {
+    for (const theme of themes) {
+        theme.name === currentTheme && addActiveClass(theme)
+    }
+}
 
 const selectActiveTheme = (e) => {
     for (const theme of themes) {
         if (theme === e.target) {
             addActiveClass(theme)
             setCurrentTheme(theme.name)
+            setThemeClass(theme.name)
         }
         else removeActiveClass(theme)
-    }
-}
-
-const setOnloadTheme = (currentTheme) => {
-    for (const theme of themes) {
-        theme.name === currentTheme && addActiveClass(theme)
     }
 }
 
 // Events
 
 window.addEventListener("load", () => {
+    if (currentTheme) currentTheme
+    else {
+        setCurrentTheme("light")
+        currentTheme = "light"
+    }
+
     setActiveToNavBarLinks()
     setCurrentTheme(currentTheme)
-    setOnloadTheme(currentTheme)
+    setClassOnloadTheme(currentTheme)
+    setThemeClass(currentTheme)
 })
 
 window.addEventListener("scroll", () => {

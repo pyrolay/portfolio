@@ -7,6 +7,7 @@
         
         ul {
             font-size: 1.2rem;
+            color: globals.$text;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 10px;

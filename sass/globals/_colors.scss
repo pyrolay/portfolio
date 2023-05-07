@@ -1,4 +1,32 @@
-$primary-color: #54633C;
-$secondary-color: #903F45;
-$background: #f7f7f7;
-$text: #303030;
+// Theme colors
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$background: var(--background);
+$text: var(--text);
+
+// Light Theme
+$light-green: #54633C;
+$light-red: #903F45;
+$light-background: #f7f7f7;
+$light-text: #303030;
+
+// Dark Theme
+$dark-green: #6fb09a;
+$dark-pink:#d95a86;
+$dark-background:#0e0e0e;
+$dark-text: #f7f7f7;
+
+
+.main-container.light {
+    --primary-color: #{$light-green};
+    --secondary-color: #{$light-red};
+    --background: #{$light-background};
+    --text: #{$light-text};
+}
+
+.main-container.dark {
+    --primary-color: #{$dark-green};
+    --secondary-color: #{$dark-pink};
+    --background: #{$dark-background};
+    --text: #{$dark-text};
+}

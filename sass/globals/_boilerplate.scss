@@ -14,7 +14,8 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+.main-container {
+    transition: 0.3s;
     background-color: colors.$background;
 }
 
