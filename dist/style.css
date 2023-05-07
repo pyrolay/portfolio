@@ -259,9 +259,13 @@ a:active {
 .hero__title .social-icon a {
   font-size: 2rem;
   margin: 0 12px;
+  transition: 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hero__title .social-icon a:hover {
+  color: #903F45;
 }
 
 .about .skills {
@@ -296,11 +300,17 @@ a:active {
 
 .projects .container__info .card__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 30px;
   margin: 16px 0;
   margin-top: 24px;
+}
+@media (min-width: 47.94em) {
+  .projects .container__info .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 .projects .container__info .card__container .card img {
   width: 100%;
@@ -356,9 +366,11 @@ a:active {
 .contact .social-links div a {
   text-decoration: underline;
   color: #903F45;
+  font-size: 1.3rem;
+  word-break: break-all;
 }
 .contact .social-links div a i {
-  font-size: 10px;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -375,8 +387,11 @@ footer h2 {
 .theme__colors {
   margin: 24px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .theme__colors button {
   width: 40px;
@@ -385,6 +400,7 @@ footer h2 {
   border: 2px solid black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
   opacity: 0.5;
+  cursor: pointer;
 }
 .theme__colors button.active {
   opacity: 1;
@@ -394,9 +410,6 @@ footer h2 {
 }
 .theme__dark {
   background-color: black;
-}
-.theme__pride {
-  background-image: linear-gradient(to bottom, #d82c01, #f1752c, #ff985b, #ffffff, #d162a3, #b75591, #a60260);
 }
 
 .nav {

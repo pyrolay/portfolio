@@ -105,8 +105,13 @@
             a {
                 font-size: 2rem;
                 margin: 0 12px;
+                transition: 0.2s;
 
-                @include utils.flexbox(center)
+                @include utils.flexbox(center);
+
+                &:hover {
+                    color: globals.$secondary-color;
+                }
             }
         }
     }

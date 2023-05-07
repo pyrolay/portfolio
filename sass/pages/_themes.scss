@@ -5,8 +5,10 @@
     &__colors {
         margin: 24px auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 24px;
+
+        @include utils.flexbox(center);
 
         button {
             width: 40px;
@@ -15,6 +17,7 @@
             border: 2px solid black;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
             opacity: 0.5;
+            cursor: pointer;
         }
 
         button.active {
@@ -28,9 +31,5 @@
 
     &__dark {
         background-color: black;
-    }
-
-    &__pride {
-        background-image: linear-gradient(to bottom, #d82c01, #f1752c, #ff985b, #ffffff, #d162a3, #b75591, #a60260);
     }
 }

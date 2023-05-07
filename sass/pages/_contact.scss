@@ -16,9 +16,11 @@
             a {
                 text-decoration: underline;
                 color: globals.$secondary-color;
+                font-size: 1.3rem;
+                word-break: break-all;
     
                 i {
-                    font-size: 10px;
+                    font-size: 0.9rem;
                 }
             }
         }
