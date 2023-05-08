@@ -9,23 +9,29 @@ const $hero = $(".hero")
 const $about = $(".about")
 const $projects = $(".projects")
 const $contact = $(".contact")
+const sections = [$hero, $about, $projects, $contact]
 
 const $$navLinks = $$(".nav-link")
 
+const $catButton = $(".cat__button")
+
 const $lightTheme = $(".theme__light")
 const $darkTheme = $(".theme__dark")
-
-const sections = [$hero, $about, $projects, $contact]
-
 const themes = [$lightTheme, $darkTheme]
 
 let currentTheme = localStorage.getItem("theme")
 
 // Functions
 
+const catSound = () => {
+    const audio = new Audio('../assets/audio/cat-sound.wav')
+    audio.volume = 0.3
+    audio.play()
+}
+
+
 const addActiveClass = (element) => element.classList.add("active")
 const removeActiveClass = (element) => element.classList.remove("active")
-
 
 const setActiveToNavBarLinks = () => {
     for (const section of sections) {
@@ -43,7 +49,6 @@ const setActiveToNavBarLinks = () => {
         }
     }
 }
-
 
 
 const setCurrentTheme = (theme) => localStorage.setItem("theme", theme)
@@ -72,9 +77,12 @@ const selectActiveTheme = (e) => {
 
 // Events
 
+$catButton.addEventListener("click", () => {
+    catSound()
+})
+
 window.addEventListener("load", () => {
-    if (currentTheme) currentTheme
-    else {
+    if (!currentTheme) {
         setCurrentTheme("light")
         currentTheme = "light"
     }
