@@ -1,17 +1,48 @@
 h1,
 h2,
 h3 {
-  font-weight: 700;
   line-height: 1.1;
   margin-top: 0;
 }
 
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 p {
   margin-top: 0;
+  color: var(--paragraph);
+  font-size: 0.9em;
+}
+
+small {
+  color: var(--paragraph);
 }
 
 a,
 a:visited,
 a:active {
+  font-weight: 600;
   text-decoration: none;
+  color: var(--text);
+
+  .link-icon {
+    margin-left: 3px;
+    transition: transform 0.3s ease;
+  }
+}
+
+a:hover {
+  transition: 0.1s;
+  color: var(--primary);
+
+  .link-icon {
+    transform: translate(50%);
+  }
 }

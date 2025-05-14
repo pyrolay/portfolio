@@ -9,12 +9,43 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  list-style: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary);
 }
 
 body {
-  margin: 0;
+  margin: 0rem 1.5rem;
   padding: 0;
   line-height: 1.8;
   font-family: u.$font;
-  background-color: var(--background-color);
+  background-color: var(--background);
+  color: var(--text);
+  display: grid;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  margin: 8px 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  &:hover {
+    border: 1px solid var(--primary);
+  }
+
+  @include u.breakpoint(large) {
+    width: 40%;
+    height: 40%;
+  }
 }

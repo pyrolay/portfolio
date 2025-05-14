@@ -1,3 +1,14 @@
+// Palette
+$background: #0f172a; 
+$text: #f8fffa;
+$paragraph-text: #a3bda8;
+$primary: #60dacd;
+$secondary: #0f4449bb;
+
 :root {
-    --background-color: #ebad4e;
+    --background: #{$background};
+    --text: #{$text};
+    --paragraph: #{$paragraph-text};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
 }

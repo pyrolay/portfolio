@@ -1,0 +1,17 @@
+@use "../util" as u;
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include u.breakpoint(large) {
+    flex-direction: row;
+    gap: 5rem;
+
+    header, .content {
+        width: 30vw;
+        padding: 6rem 0rem;
+    }
+  }
+}

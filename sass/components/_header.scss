@@ -1,0 +1,65 @@
+@use "../util" as u;
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h2,
+header p {
+  margin-bottom: 16px;
+}
+
+header {
+  @include u.breakpoint(large) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    max-height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+header nav {
+  display: none;
+
+  @include u.breakpoint(large) {
+    display: block;
+  }
+}
+
+header .contact ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: -2px -1.5rem 1rem;
+  width: 100vw;
+  background: var(--background);
+  padding: 1.25rem 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+
+  h3 {
+    letter-spacing: 0.1em;
+    color: var(--text);
+    margin: 0;
+  }
+
+  @include u.breakpoint(large) {
+    display: none;
+  }
+}
